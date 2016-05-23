@@ -65,6 +65,9 @@ static void handle_term(int sig){
 	stop = true;
 	cout<<"handel_term"<<endl;
 }
+void ShowMsg(const char*str){
+	cout<<str<<endl;
+}
 
 int main() {
 	/*map<int,string> m_AllSockets;
@@ -170,27 +173,9 @@ int main() {
 	}
 	cout<<"end..."<<endl;
 	close(_socket);*/
-	int m_nAddTimesInDay,m_nTotalAddTimes,m_nSubTimesInDay,m_nTotalSubTimes;
-	m_nAddTimesInDay = 1;
-	m_nTotalAddTimes = 2;
-	m_nSubTimesInDay = 3;
-	m_nTotalSubTimes = 4;
-	double x=12.234;
-	char cBuf[30];
-	sprintf(cBuf,"%i/%i__%i/%i",m_nAddTimesInDay,m_nTotalAddTimes,m_nSubTimesInDay,m_nTotalAddTimes);
-	cout<<cBuf<<endl;
-	sprintf(cBuf,"%.2f,%i/%i__%i/%i",x,m_nAddTimesInDay,m_nTotalAddTimes,m_nSubTimesInDay,m_nTotalAddTimes);
-	cout<<cBuf<<endl;
-	for(int i=0;i<20; i++){
-		if(i%2 == 0){
-			sprintf(cBuf,"%i/%i__%i/%i",m_nAddTimesInDay,m_nTotalAddTimes,m_nSubTimesInDay,m_nTotalAddTimes);
-			cout<<cBuf<<endl;
-		}else{
-			sprintf(cBuf,"%.2f,%i/%i__%i/%i",x,m_nAddTimesInDay,m_nTotalAddTimes,m_nSubTimesInDay,m_nTotalAddTimes);
-			cout<<cBuf<<endl;
-		}
-	}
-	cout<<"add new changes"<<endl;
+	char cBuf[128];
+	strcpy(cBuf,"this is My_Test ShowMsg!");
+	ShowMsg(cBuf);
 	return 0;
 }
 
