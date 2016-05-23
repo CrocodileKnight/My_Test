@@ -190,6 +190,7 @@ int main() {
 			cout<<cBuf<<endl;
 		}
 	}
+	cout<<"add new changes"<<endl;
 	return 0;
 }
 
